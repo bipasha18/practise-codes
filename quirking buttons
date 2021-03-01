@@ -1,0 +1,24 @@
+Input:2 3 4 6 7 9
+saptarshi das bipasha roy roma dey rajdeep majumdar subhrajyoti roy koustav
+Output:['das', 'bipasha', 'roy', 'roma', 'dey', 'roy']
+
+
+phone={2:'abc',3:'def',4:'ghi',5:'jkl',6:'mno',7:'pqrs',8:'tuv',9:'wxyz'}
+listt=list(map(int,input().split()))
+words=input().split()
+letter=''
+final=[]
+for i in listt:
+    letter+=phone[i]
+
+for i in range(0,len(words)):
+    flag=0
+    word=words[i]
+    for j in word:
+        if j not in letter:
+            flag=1
+            break
+    if(flag==0):
+        final.append(word)
+    
+print(final)
